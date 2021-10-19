@@ -13,5 +13,7 @@ router.get('/get-all', async (req, res) => {
    res.status(500).send(e);
  }
 });
-
+router.post('/save-user', student.createUser);
+router.put('/update-user/:id', student.UpdateUser)
+router.delete('/delete-user/:id', student.DeleteUser)
 module.exports = router;
